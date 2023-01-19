@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Q3. Create a function that takes two numbers as arguments (num, length) and returns an array of multiples of num until the array length reaches length.
+Example: -arrayOfMultiples(12, 10) [12, 24, 36, 48, 60, 72, 84, 96, 108, 120]
+Notes: -Notice that num is also included in the returned array. -->
+    <title>arrayOfMultiples</title>
+</head>
+<body>
+    <script>
+        function aom(num,length){
+            var arrayofMultiples=[]
+            var temp=0
+            for(var i=1;i<=length;i++){
+                temp=temp+num
+                arrayofMultiples.push(temp)
+            }
+            return  arrayofMultiples
+        }
+        num=parseInt(prompt("enter number:"))
+        length=parseInt(prompt("enter length:"))
+        console.log(aom(num,length))
+    </script>
+</body>
+</html>
