@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function to calculate depth of array</title>
+    <!-- Q4. Given an array, write a function to calculate its depth. Assume that a normal array has a depth of 1.
+Examples
+depth ([1, 2, 3, 4]) 1
+depth ([1, [2, [3, 4]]]) 3 -->
+</head>
+<body>
+    <script>
+        function depth(arr) {
+    let maxDepth = 1;
+    for (let i = 0; i < arr.length; i++) {
+        if (Array.isArray(arr[i])) {
+            maxDepth = Math.max(maxDepth, 1 + depth(arr[i]));
+        }
+    }
+    return maxDepth;
+}
+
+console.log(depth([1, [2, [3, 4]]]));
+
+    </script>
+</body>
+</html>
