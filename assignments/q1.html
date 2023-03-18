@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}   
+
+h1 {
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+label {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+input[type="text"] {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  font-size: 20px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #3E8E41;
+}
+
+ul {
+  list-style: none;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+    </style>
+</head>
+<body>
+    <h1>Country Population List</h1>
+    <div class="input-container">
+      <label for="countryInput">Enter a country:</label>
+      <input type="text" id="countryInput">
+      <button id="addButton" onclick="countryDetails()">Add</button>
+    </div>
+    <ul id="countryList"></ul>
+    <script>
+      function countryDetails(){
+let countryName = document.getElementById('countryInput').value; 
+fetch(`https://restcountries.com/v3.1/name/${countryName}`)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data)
+    let population = data[0].population;
+
+    let countryList = document.getElementById("countryList");
+    let li = document.createElement("li");
+    li.innerText = `${countryName}: ${population}`;
+    countryList.appendChild(li);
+
+  })
+  .catch(error => {
+    console.error(error);
+
+    alert(`"${countryName}" is not a recognized country.`);
+  });
+}
+    </script>
+</body>
+</html>
+
