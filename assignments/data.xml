@@ -1,0 +1,17 @@
+<restaurants>
+  <restaurant name="The French Laundry" address="Yountville" lat="38.400699" lng="-122.364324" type="sit down"/>
+  <restaurant name="Per Se" address="New York" lat="40.768237" lng="-73.982311" type="sit down"/>
+  <restaurant name="The Dead Rabbit" address="New York" lat="40.703075" lng="-74.011310" type="bar"/>
+  <restaurant name="Eleven Madison Park" address="New York" lat="40.741982" lng="-73.986177" type="sit down"/>
+  <restaurant name="Alinea" address="Chicago" lat="41.913245" lng="-87.648528" type="sit down"/>
+  <restaurant name="Connaught Bar" address="London" lat="51.508050" lng="-0.147865" type="bar"/>
+  <restaurant name="Osteria Francescana" address="Modena" lat="44.644778" lng="10.925298" type="sit down"/>
+  <restaurant name="El Celler de Can Roca" address="Girona" lat="41.986442" lng="2.802050" type="sit down"/>
+  <restaurant name="Mirazur" address="Menton" lat="43.776968" lng="7.502735" type="sit down"/>
+  <restaurant name="The Clumsies" address="Athina" lat="37.978399" lng="23.725138" type="bar"/>
+  <restaurant name="Central" address="Miraflores" lat="-12.125853" lng="-77.030953" type="sit down"/>
+  <restaurant name="Attica" address="Ripponlea" lat="-37.876142" lng="144.991905" type="sit down"/>
+  <restaurant name="Gaggan" address="Bangkok" lat="13.738744" lng="100.542574" type="sit down"/>
+  <restaurant name="The Aviary" address="Chicago" lat="41.886556" lng="-87.654304" type="bar"/>
+  <restaurant name="PDT" address="New York" lat="40.727015" lng="-73.984369" type="bar"/>
+</restaurants>
